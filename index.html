@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Community Awareness About Recycling</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6fbf7;--card:#fff;--ink:#12281d;--mute:#4b6357;--green:#1f9d55;--deep:#0e5c3a;--blue:#1c7ed6;--sky:#e3f1fc;--mint:#e2f5e9;--bad:#c2410c;--line:#d5e6db;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d1a13;--card:#15271d;--ink:#e6f3ea;--mute:#9db5a7;--green:#3ec77a;--deep:#8fe0b3;--blue:#5aa9f0;--sky:#13293b;--mint:#16301f;--bad:#f59e6b;--line:#27402f}}
+:root[data-theme="dark"]{--bg:#0d1a13;--card:#15271d;--ink:#e6f3ea;--mute:#9db5a7;--green:#3ec77a;--deep:#8fe0b3;--blue:#5aa9f0;--sky:#13293b;--mint:#16301f;--bad:#f59e6b;--line:#27402f}
+html{scroll-behavior:smooth;scroll-padding-top:calc(70px + env(safe-area-inset-top,0px))}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 "Source Sans 3",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.15;margin:0 0 .5em}
+h2{font-size:clamp(1.8rem,4vw,2.5rem)}
+section{padding:72px 20px}
+.wrap{max-width:1050px;margin:auto}
+.lead{color:var(--mute);max-width:62ch}
+nav{position:sticky;top:0;z-index:10;background:var(--card);border-bottom:1px solid var(--line);padding:10px 20px;padding-top:calc(10px + env(safe-area-inset-top,0px));display:flex;align-items:center;justify-content:space-between;gap:12px}
+nav b{font-family:"Bricolage Grotesque",sans-serif;color:var(--deep);white-space:nowrap}
+nav ul{display:flex;gap:4px;list-style:none;margin:0;padding:0;overflow-x:auto}
+nav a{display:block;padding:6px 11px;border-radius:99px;color:var(--ink);text-decoration:none;font-size:.95rem;white-space:nowrap;transition:background .2s}
+nav a:hover,nav a:focus-visible{background:var(--mint)}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+.hero{background:linear-gradient(160deg,var(--deep),#127a8f 60%,var(--blue));color:#fff;padding:80px 20px}
+.hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(2.4rem,6vw,4.4rem);font-weight:800}
+.hero p{font-size:1.15rem;max-width:52ch;opacity:.95}
+.btn{display:inline-block;border:0;cursor:pointer;background:#fff;color:var(--deep);font:600 1.05rem "Source Sans 3",sans-serif;padding:14px 28px;border-radius:99px;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(0,0,0,.2)}
+.btn.g{background:var(--green);color:#fff}
+.loop{width:100%;max-width:340px;margin:auto;animation:spin 24s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.loop{animation:none}html{scroll-behavior:auto}*{transition:none!important}}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:28px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-4px);box-shadow:0 10px 24px rgba(14,92,58,.12)}
+.ico{font-size:2.2rem;display:block;margin-bottom:6px}
+.alt{background:var(--mint)}.alt2{background:var(--sky)}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0 16px}
+.tab{border:1px solid var(--line);background:var(--card);color:var(--ink);padding:9px 16px;border-radius:99px;cursor:pointer;font:600 1rem "Source Sans 3",sans-serif;transition:background .2s}
+.tab:hover{background:var(--mint)}
+.tab[aria-selected="true"]{background:var(--green);color:#fff;border-color:var(--green)}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.yes{border-left:6px solid var(--green)}.no{border-left:6px solid var(--bad)}
+.yes h3{color:var(--green)}.no h3{color:var(--bad)}
+ul.p{padding-left:20px;margin:0}
+.bin{text-align:center}
+.bin svg{width:84px;height:100px}
+.tip{text-align:left;width:100%;font:inherit;color:inherit;cursor:pointer}
+.tip .more{max-height:0;overflow:hidden;color:var(--mute);transition:max-height .35s}
+.tip[aria-expanded="true"] .more{max-height:200px;margin-top:8px}
+.tip small{color:var(--blue);font-weight:600}
+.stat{text-align:center}
+.stat b{display:block;font:800 2.6rem "Bricolage Grotesque",sans-serif;color:var(--blue)}
+.slogan{margin:40px 0 0;padding:30px;border-radius:20px;text-align:center;background:var(--green);color:#fff}
+.slogan h3{font-size:2rem;margin:0 0 8px}
+.notice{margin:18px 0;padding:14px 18px;border-left:5px solid var(--blue);border-radius:10px;background:var(--sky);color:var(--ink)}
+.sources{font-size:.95rem;color:var(--mute);margin-top:18px}
+.sources a{color:var(--deep)}
+.form-note{max-width:620px;color:var(--mute)}
+form{display:grid;gap:14px;max-width:620px}
+label{font-weight:600;display:grid;gap:6px}
+input,textarea{font:inherit;padding:12px 14px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--ink)}
+.ok{display:none;background:var(--mint);border:2px solid var(--green);border-radius:14px;padding:18px;max-width:620px;font-weight:600}
+.opt{display:block;width:100%;text-align:left;margin:8px 0;padding:12px 16px;border-radius:12px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:inherit;cursor:pointer;transition:background .2s}
+.opt:hover:not(:disabled){background:var(--sky)}
+.opt.right{background:var(--mint);border-color:var(--green)}.opt.wrong{border-color:var(--bad);background:rgba(194,65,12,.12)}
+.bar{height:8px;background:var(--line);border-radius:9px;overflow:hidden;margin-bottom:16px}.bar i{display:block;height:100%;background:var(--green);transition:width .3s}
+footer{background:var(--deep);color:#fff;text-align:center;padding:36px 20px calc(36px + env(safe-area-inset-bottom,0px))}
+footer b{font-family:"Bricolage Grotesque",sans-serif;font-size:1.2rem}
+@media (max-width:760px){.hero .wrap,.cols{grid-template-columns:1fr}.loop{max-width:200px}nav b{display:none}section{padding:56px 18px}}
+</style>
+</head>
+<body>
+<nav aria-label="Main">
+<b>♻️ Recycle Right</b>
+<ul>
+<li><a href="#about">About</a></li><li><a href="#types">Waste Types</a></li><li><a href="#segregation">Segregation</a></li><li><a href="#tips">Tips</a></li><li><a href="#community">Community</a></li><li><a href="#quiz">Quiz</a></li><li><a href="#contact">Feedback</a></li>
+</ul>
+</nav>
+
+<header class="hero" id="home">
+<div class="wrap">
+<div>
+<h1>Recycle Today, Save Tomorrow</h1>
+<p>Every bottle, newspaper and old phone has a second life if we sort it right. Recycling cuts pollution, protects forests and rivers, and keeps our neighbourhoods clean. Start with one small habit today.</p>
+<a class="btn" href="#about">Learn About Recycling</a>
+</div>
+<svg class="loop" viewBox="0 0 200 200" role="img" aria-label="Three arrows forming a recycling loop">
+<g fill="none" stroke="#fff" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
+<path d="M100 28 A72 72 0 0 1 162 64"/><path d="M162 64 l-4 -22 M162 64 l-22 2"/>
+<path d="M170 112 A72 72 0 0 1 120 168" stroke="#bfe3ff"/><path d="M120 168 l20 -8 M120 168 l8 -20" stroke="#bfe3ff"/>
+<path d="M70 168 A72 72 0 0 1 32 70" stroke="#a7f0c4"/><path d="M32 70 l-4 22 M32 70 l22 -4" stroke="#a7f0c4"/>
+</g></svg>
+</div>
+</header>
+
+<section id="about"><div class="wrap">
+<h2>About Recycling</h2>
+<p class="lead"><b>Recycling</b> means collecting used materials such as paper, glass, metal and plastic, and turning them into new products instead of throwing them away. It matters because our planet's resources are limited and our landfills are filling up fast.</p>
+<div class="grid">
+<div class="card"><span class="ico">🌫️</span><h3>Reduces pollution</h3><p>Making products from recycled material uses less energy than starting from raw material, so fewer harmful gases and less water pollution.</p></div>
+<div class="card"><span class="ico">🌳</span><h3>Saves natural resources</h3><p>Recycling paper saves trees, and recycling metal and glass reduces mining and quarrying.</p></div>
+<div class="card"><span class="ico">🗑️</span><h3>Reduces landfill waste</h3><p>Less rubbish in landfills means less land used, fewer bad smells and less harmful leakage into soil and groundwater.</p></div>
+<div class="card"><span class="ico">💼</span><h3>Creates green jobs</h3><p>Collecting, sorting and processing waste gives work to many people and supports local businesses.</p></div>
+</div>
+</div></section>
+
+<section id="types" class="alt"><div class="wrap">
+<h2>Types of Waste</h2>
+<p class="lead">Choose a waste type to see what can and cannot be recycled.</p>
+<p class="notice">Accepted materials and sorting rules vary by community. Check your local municipality or waste collector before you sort. Organic waste should be composted, not placed with dry recyclables.</p>
+<div class="tabs" role="tablist" aria-label="Waste types" id="tabs"></div>
+<div id="typeOut" role="tabpanel" tabindex="0" aria-live="polite"></div>
+</div></section>
+
+<section id="segregation"><div class="wrap">
+<h2>Waste Segregation</h2>
+<p class="lead">Sorting waste at home is an important first step. Keep separate bins, keep recyclables clean and dry, and never mix wet food waste with dry waste. The bin colours below are examples; follow your local collection rules.</p>
+<div class="grid" id="bins"></div>
+</div></section>
+
+<section id="tips" class="alt2"><div class="wrap">
+<h2>Recycling Tips</h2>
+<p class="lead">Tap a card to learn how to put each tip into practice.</p>
+<div class="grid" id="tipGrid"></div>
+</div></section>
+
+<section id="community"><div class="wrap">
+<h2>Community Awareness</h2>
+<p class="lead">When a whole neighbourhood recycles, the results add up quickly.</p>
+<div class="grid">
+<div class="card stat"><b>2.1 billion</b>tonnes of municipal solid waste generated worldwide in 2023.</div>
+<div class="card stat"><b>3.8 billion</b>tonnes of municipal solid waste projected annually by 2050 if urgent action is not taken.</div>
+<div class="card stat"><b>~40%</b>of the world's waste is estimated to end up in open dumpsites.</div>
+<div class="card stat"><b>9%</b>of global plastic waste was recycled in 2019, after recycling losses.</div>
+</div>
+<p class="sources"><b>Sources:</b> <a href="https://www.unep.org/ietc/index.php/resources/report/global-waste-management-outlook-2024" target="_blank" rel="noopener noreferrer">UNEP, Global Waste Management Outlook 2024</a> (waste figures); <a href="https://www.unep.org/en/what-we-do/chemicals-and-pollution-action/waste/open-dumping" target="_blank" rel="noopener noreferrer">UNEP, Open dumping</a> (approximate share; accessed 18 October 2026); <a href="https://www.oecd.org/en/publications/global-plastics-outlook_aa1edf33-en/full-report/component-10.html" target="_blank" rel="noopener noreferrer">OECD, Global Plastics Outlook</a> (2019 plastic-waste estimate, published 2022).</p>
+<h3 style="margin-top:36px">Join in</h3>
+<div class="grid">
+<div class="card"><span class="ico">🧹</span><h3>Clean-up drives</h3><p>Organise a weekend clean-up of a park, lake or street with friends.</p></div>
+<div class="card"><span class="ico">🏫</span><h3>School and college drives</h3><p>Set up segregation bins and an e-waste collection box on campus.</p></div>
+<div class="card"><span class="ico">🎨</span><h3>Best out of waste</h3><p>Hold a craft or poster competition using discarded materials.</p></div>
+<div class="card"><span class="ico">📣</span><h3>Spread the word</h3><p>Tell your family and neighbours how to sort their waste.</p></div>
+</div>
+<div class="slogan"><h3>Small Steps, Big Change</h3><p>One sorted bin, one refused plastic bag, one shared idea. That is how a community changes.</p></div>
+</div></section>
+
+<section id="quiz" class="alt"><div class="wrap">
+<h2>Recycling Quiz</h2>
+<p class="lead">Five quick questions. Test what you have learned.</p>
+<div class="card" style="max-width:640px" id="quizBox"></div>
+</div></section>
+
+<section id="contact"><div class="wrap">
+<h2>Save Feedback</h2>
+<p class="lead">Have a suggestion or a question? Prepare a copy to share with your local community organiser.</p>
+<p class="form-note">This page does not send or store messages online. When you submit the form, it downloads a text copy to your device.</p>
+<form id="fb">
+<label>Name<input name="n" required autocomplete="name"></label>
+<label>Email<input name="e" type="email" required autocomplete="email"></label>
+<label>Message<textarea name="m" rows="5" required></textarea></label>
+<div><button class="btn g" type="submit">Save feedback</button></div>
+</form>
+<div class="ok" id="ok" role="status" tabindex="-1"></div>
+</div></section>
+
+<footer>
+<b>Community Awareness About Recycling</b>
+<p style="margin:6px 0 0">Together, We Can Build a Cleaner and Greener Community.</p>
+</footer>
+
+<script>
+const $=s=>document.querySelector(s);
+const types=[
+["🍌","Organic",["Fruit and vegetable peels","Leftover food","Garden leaves and grass","Tea leaves and eggshells"],["Cooked meat and bones in home compost","Oily or heavily spiced food in compost","Plastic-wrapped food"],"Compost it at home or in a community pit to make natural manure."],
+["📰","Paper",["Newspapers and magazines","Cardboard boxes (flattened)","Office paper and notebooks","Clean paper bags"],["Greasy pizza boxes","Used tissues and paper towels","Wax or plastic-coated paper","Thermal receipts"],"Keep paper dry. Wet paper cannot be recycled."],
+["🧴","Plastic",["PET water and soft-drink bottles","Milk and shampoo bottles (HDPE)","Clean plastic containers","Plastic jars with lids"],["Dirty or food-soiled plastic","Chip and biscuit wrappers","Thermocol (polystyrene)","Plastic bags that are not accepted locally"],"Rinse, dry and crush bottles before handing them over."],
+["🍾","Glass",["Glass bottles and jars","Colourless, green and brown glass"],["Window glass and mirrors","Light bulbs and tube lights","Ceramic cups and plates","Broken drinking glasses"],"Glass can be recycled again and again without losing quality."],
+["🥫","Metal",["Aluminium and steel cans","Clean foil","Copper and brass items","Old utensils and scrap iron"],["Paint and aerosol cans that are not empty","Batteries","Metal mixed with plastic or food"],"Rinse cans. Scrap metal can be sold to a local scrap dealer."],
+["💻","E-waste",["Old mobiles and chargers","Computers and laptops","Cables and headphones","Small appliances"],["Throwing them in the general bin","Burning wires to get copper","Giving to unauthorised scrap buyers"],"Hand over to an authorised e-waste collector. Devices hold toxic lead and mercury."]];
+const tabs=$("#tabs"),out=$("#typeOut");
+function show(i,focus=false){
+ [...tabs.children].forEach((b,j)=>{b.setAttribute("aria-selected",j===i);b.tabIndex=j===i?0:-1});
+ const t=types[i],l=a=>"<ul class='p'>"+a.map(x=>"<li>"+x+"</li>").join("")+"</ul>";
+ const positive=t[1]==="Organic"?"Good for composting":"Often accepted for recycling";
+ const negative=t[1]==="Organic"?"Keep out of basic home compost":"Keep out or use special collection";
+ out.setAttribute("aria-labelledby",`waste-tab-${i}`);
+ out.innerHTML=`<div class="cols"><div class="card yes"><h3>✅ ${positive}</h3>${l(t[2])}</div><div class="card no"><h3>❌ ${negative}</h3>${l(t[3])}</div></div><p class="card" style="margin-top:18px"><b>Tip:</b> ${t[4]}</p>`;
+ if(focus)tabs.children[i].focus();
+}
+types.forEach((t,i)=>{const b=document.createElement("button");b.className="tab";b.id=`waste-tab-${i}`;b.type="button";b.setAttribute("role","tab");b.setAttribute("aria-selected","false");b.setAttribute("aria-controls","typeOut");b.tabIndex=-1;b.textContent=t[0]+" "+t[1];b.onclick=()=>show(i);b.onkeydown=e=>{let next=i;if(e.key==="ArrowRight")next=(i+1)%types.length;else if(e.key==="ArrowLeft")next=(i+types.length-1)%types.length;else if(e.key==="Home")next=0;else if(e.key==="End")next=types.length-1;else return;e.preventDefault();show(next,true)};tabs.append(b)});show(0);
+
+const bins=[["#2e9e4f","Green bin","Wet waste","Food scraps, peels, garden waste"],["#1c7ed6","Blue bin","Dry recyclables","Paper, plastic, glass, metal"],["#6b7280","Grey / black bin","Rejects and sanitary","Diapers, sanitary pads, dust, broken ceramics"],["#e6a700","Yellow / red bin","Hazardous and e-waste","Batteries, bulbs, old electronics, medicines"]];
+$("#bins").innerHTML=bins.map(b=>`<div class="card bin"><svg viewBox="0 0 84 100" aria-hidden="true"><rect x="6" y="14" width="72" height="12" rx="4" fill="${b[0]}"/><path d="M12 28h60l-6 66H18z" fill="${b[0]}" opacity=".85"/><path d="M42 44l8 14h-16z" fill="#fff"/><path d="M34 70h16l-8 14z" fill="#fff" opacity=".7"/></svg><h3>${b[1]}</h3><b>${b[2]}</b><p>${b[3]}</p></div>`).join("");
+
+const tips=[["🥤","Reduce single-use plastic","Carry a cloth bag, a steel bottle and your own cup. Say no to plastic straws and disposable cutlery."],["🔁","Reuse useful materials","Turn glass jars into storage, old T-shirts into cleaning cloths and used paper into rough notebooks."],["🗂️","Separate recyclable waste","Keep wet and dry waste apart. Rinse containers so they stay clean and recyclable."],["🚯","Avoid littering","Carry your wrapper until you find a bin. Litter blocks drains and harms animals."],["🎁","Donate or reuse old items","Give clothes, books and toys to those who need them. Repair before you replace."],["🔌","Dispose of e-waste responsibly","Use authorised collection centres or company take-back programmes. Never bin batteries or old phones."]];
+$("#tipGrid").innerHTML=tips.map(t=>`<button class="card tip" aria-expanded="false"><span class="ico">${t[0]}</span><h3>${t[1]}</h3><small>Tap to learn how</small><div class="more">${t[2]}</div></button>`).join("");
+document.querySelectorAll(".tip").forEach(b=>b.onclick=()=>b.setAttribute("aria-expanded",b.getAttribute("aria-expanded")!="true"));
+
+const qs=[["Which bin is usually used for fruit and vegetable peels?",["Blue bin","Green bin","Grey bin"],1],["Which item CANNOT go in the paper recycling?",["Newspaper","Cardboard box","Greasy pizza box"],2],["What should you do with an old mobile phone?",["Put it in the dustbin","Give it to an authorised e-waste collector","Burn it"],1],["Which material can be recycled again and again without losing quality?",["Glass","Thermocol","Tissue paper"],0],["What does the slogan 'Reduce, Reuse, Recycle' put first?",["Recycle","Reuse","Reduce"],2]];
+let qi=0,sc=0;const qb=$("#quizBox");
+function ask(){
+ if(qi>=qs.length){const m=sc==5?"Eco champion! 🌍":sc>=3?"Great work! Keep going. 🌱":"Good start. Review the sections and try again. ♻️";
+  qb.innerHTML=`<h3>Your score: ${sc} / ${qs.length}</h3><p>${m}</p><button class="btn g" id="again">Try again</button>`;$("#again").onclick=()=>{qi=sc=0;ask()};return}
+ const q=qs[qi];
+ qb.innerHTML=`<div class="bar"><i style="width:${qi/qs.length*100}%"></i></div><p><b>Question ${qi+1} of ${qs.length}</b></p><h3>${q[0]}</h3>`+q[1].map((o,i)=>`<button class="opt" data-i="${i}">${o}</button>`).join("")+`<p id="fbk" aria-live="polite"></p>`;
+ qb.querySelectorAll(".opt").forEach(b=>b.onclick=()=>{
+  const i=+b.dataset.i;qb.querySelectorAll(".opt").forEach(x=>x.disabled=true);
+  qb.querySelectorAll(".opt")[q[2]].classList.add("right");
+  if(i==q[2]){sc++;$("#fbk").textContent="Correct!"}else{b.classList.add("wrong");$("#fbk").textContent="Not quite. The right answer is highlighted."}
+  const n=document.createElement("button");n.className="btn g";n.textContent=qi==qs.length-1?"See result":"Next question";n.onclick=()=>{qi++;ask()};qb.append(n)})}
+ask();
+
+$("#fb").onsubmit=e=>{e.preventDefault();const form=e.target,n=form.n.value.trim();const text=`Community recycling feedback\n\nName: ${n}\nEmail: ${form.e.value.trim()}\n\nMessage:\n${form.m.value.trim()}\n`;const blob=new Blob([text],{type:"text/plain;charset=utf-8"});const url=URL.createObjectURL(blob);const link=document.createElement("a");link.href=url;link.download="recycling-feedback.txt";document.body.append(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);const o=$("#ok");o.textContent="Your feedback copy was downloaded to your device. It has not been sent to this website; share it with your local community organiser if you choose. 🌿";o.style.display="block";o.focus();form.reset()};
+</script>
+</body>
+</html>
